@@ -6,6 +6,7 @@ class LeadsController < ApplicationController
   end
 
   def index
+    @lead = Lead.new
   end
 
   def show

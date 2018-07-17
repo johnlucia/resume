@@ -1,0 +1,49 @@
+<div class="section section-contact-us text-center">
+  <div class="container">
+    <h2 class="title">Want to work with us?</h2>
+    <p class="description">Your project is very important to us.</p>
+    <div class="row">
+      <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+        <%= form_for @lead, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+          <% if @lead.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+              <ul>
+              <% @lead.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="input-group input-lg">
+            <span class="input-group-addon">
+              <i class="now-ui-icons users_circle-08"></i>
+            </span>
+            <%= f.text_field :name, class: "form-control", placeholder: "Your Name..." %>
+          </div>
+
+          <div class="input-group input-lg">
+            <span class="input-group-addon">
+              <i class="now-ui-icons ui-1_email-85"></i>
+            </span>
+            <%= f.text_field :email, class: "form-control", placeholder: "Email..." %>
+          </div>
+
+          <div class="textarea-container">
+            <%= f.text_area :message, class: "form-control", name: "name", rows: "4", cols: "80", placeholder: "Type a message..." %>
+          </div>
+
+          <!-- <div class="send-button">
+            <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
+          </div> -->
+
+          <div class="send-button actions">
+            <%= f.submit 'Send Message', class: "btn btn-primary btn-round btn-block btn-lg"%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
