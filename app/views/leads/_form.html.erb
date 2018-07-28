@@ -7,13 +7,10 @@
         <%= form_for @lead, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
           <% if @lead.errors.any? %>
             <div id="error_explanation">
-              <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
-
-              <ul>
+              <h2>Sorry, there were <%= pluralize(@lead.errors.count, "error") %> problems with your submission:</h2>
               <% @lead.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
+                <p class='text-danger'><%= message %></p>
               <% end %>
-              </ul>
             </div>
           <% end %>
 
