@@ -6,6 +6,8 @@ class LeadsController < ApplicationController
     @lead = Lead.new(lead_params)
 
     if @lead.save
+      LeadMailer.send_lead_email(@lead).deliver
+      LeadMailer.notify_me(@lead).deliver
       redirect_to @lead, notice: 'Contact was successfully created.'
     else
       render :index
