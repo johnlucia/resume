@@ -1,0 +1,66 @@
+<div class="wrapper">
+  <div class="page-header page-header-medium">
+    <div class="page-header-image" data-parallax="true" style="background-image: url('/assets/img/matia-island.jpg');">
+    </div>
+    <div class="container">
+      <div class="content-center">
+        <h1 class="title">Technical Skills</h1>
+        <%= render 'social' %>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container text-center">
+      <div class="row justify-content-md-center">
+        <div class="col-md-12 col-lg-8">
+          <h2 class="title" id="technical-skills">Core Technical Skills</h2>
+          <h5 class="description">My core technical skillsets are in Ruby, Javascript, HTML and CSS. For most projects I use one or more frameworks such as Ruby on Rails, EmberJs, jQuery, Bootstrap, or Materialize.</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-story-overview">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Projects</h2>
+          <p>I believe the best designed and built projects use the simplest solutions. They're easily scaled or extended by any developer, and need minimal maintenance year after year. Here are a few of my projects that I think meet that criteria. Please <a href="#email-contact-form" class="email-contact-button">contact me</a> for more examples, or additional information on any project listed here.</p>
+
+          <h4>Personal website and blog at <a href="http://www.followrhythm.com">www.FollowRhythm.com</a></h4>
+          <p>This is a website built with Ruby on Rails, using RefineryCMS. The design is based on a Bootstrap template from Creative Tim. It includes an integration with a custom email API and Google Maps where a boat's position is displayed in real time. Emails are sent periodically from a sattelite phone containing current Latitude and Longitude information. The API parses the emails and saves the position reports to the database. The front end uses the data to plot the boat's current position and route on a <a href="http://www.followrhythm.com/find-us">map</a>.</p>
+
+          <h4>Enterprise Blogging Platform For G5</h4>
+          <p>Working for G5, I designed and built a blogging platform that's currently hosting over 800 blogs. A Ruby on Rails application provides a Bootstrap UI for creating, editing, and publishing blogs. It also provides an API to deploy the blog as a set of static pages or serve them up via AJAX requests. On the front end, javascript/jQuery takes care of the viewing, navigation and filtering for end users.</p>
+
+          <h4>Heroku Platform API Integration for G5</h4>
+          <p>Again for G5, I built an internal tool (Dubbed The App Wrangler) for managing several hundred applications hosted on Heroku. A Ruby on Rails app works with the Heroku Platform API to help identify apps with excessive hosting costs and manage configurations.</p>
+
+          <h4>Social Media Proxy Service for G5</h4>
+          <p>For G5 I built a service that delivers social media feeds from Facebook, Twitter, Instagram and others to thousands of client websites. Using Ruby, it provides an adapter that interacts with each service's API, and provides it's own API that delivers content to customer websites. API quotas are carefully managed by cacheing fresh data in Redis when API usage is within acceptable limits. When we're approaching an API limit, data is served from memory. On the front end, session storage is used to help alleviate the load on our own servers.</p>
+        </div>
+
+        <div class="col-md-6">
+          <h2>Tools & Integrations</h2>
+          <p>Much of my work has involved integrating 3rd party services into websites and applications. Here is a list of some of the services I have experience working with.</p>
+          <ul>
+            <li><span class="text-info">Facebook Graph API:</span> Importing content from facebook feeds and timelines into websites.</li>
+            <li><span class="text-info">Twitter API:</span> Display Twitter feeds on a website.</li>
+            <li><span class="text-info">Heroku Platform API:</span> Listing, managing and configuring hundreds of Heroku apps.</li>
+            <li><span class="text-info">Cloudinary:</span> I've used cloudinary to give users of a CMS the ability to crop and size their website photos right in the browser, and to serve responsive images based on screen size.</li>
+            <li><span class="text-info">Amazon S3:</span> Storing static website assets on cloud and hosting basic sites.</li>
+            <li><span class="text-info">Google Maps Platform:</span> Displaying maps on websites and Geocode lookups of street addresses.</li>
+            <li><span class="text-info">RefineryCMS:</span> I've built many sites using RefineryCMS as a content management system.</li>
+            <li><span class="text-info">Chatmeter:</span> I've worked with Chatmeter's API to automatically push updates to listing data.</li>
+            <li><span class="text-info">XXXXX:</span></li>
+            <li><span class="text-info">XXXXX:</span></li>
+            <li><span class="text-info">XXXXX:</span></li>
+            <li><span class="text-info">XXXXX:</span></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <%= render 'form' %>

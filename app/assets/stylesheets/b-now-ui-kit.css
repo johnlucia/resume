@@ -5567,6 +5567,11 @@ Created using IcoMoon - icomoon.io
     max-height: 440px;
 }
 
+.page-header.page-header-medium {
+    height: 80vh;
+    max-height: 660px;
+}
+
 .page-header:after,
 .page-header:before {
     position: absolute;

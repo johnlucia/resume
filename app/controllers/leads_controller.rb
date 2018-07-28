@@ -20,6 +20,10 @@ class LeadsController < ApplicationController
     @lead = Lead.find(params[:id])
   end
 
+  def resume
+    @lead = Lead.new
+  end
+
   private
 
   def lead_params
