@@ -9,7 +9,7 @@ class LeadMailer < ApplicationMailer
 
   def notify_me(lead)
     @lead = lead
-    mail( :to => "test@test.com",
+    mail( :to => ENV['MY_EMAIL'],
     :subject => 'Got One!' )
   end
 end
