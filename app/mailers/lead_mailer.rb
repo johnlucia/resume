@@ -1,5 +1,5 @@
 class LeadMailer < ApplicationMailer
-  default :from => 'any_from_address@example.com'
+  default :from => 'no_reply@johnlucia.com'
 
   def send_lead_email(lead)
     @lead = lead
