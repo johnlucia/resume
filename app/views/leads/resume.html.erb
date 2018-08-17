@@ -37,6 +37,9 @@
           <hr>
           <h5>Social Media Proxy Service for G5</h5>
           <p>For G5 I built a service that delivers social media feeds from Facebook, Twitter, Instagram and others to thousands of client websites. Using Ruby, it provides an adapter that interacts with each service's API, and provides it's own API that delivers content to customer websites. API quotas are carefully managed by cacheing fresh data in Redis when API usage is within acceptable limits. When we're approaching an API limit, data is served from memory. On the front end, session storage is used to help alleviate the load on our own servers.</p>
+          <hr>
+          <h5>Automated Testing for G5</h5>
+          <p>Using Ruby, Selenium and Pusher, I built a tool to automate a tedious manual QA process of a service oriented architecture. The tool uses Selenium to mimic user interactions in one app, and confirm that those interactions have the correct result in other apps within the system. Pusher notifies the tester immediately each time an automated check passes or fails.</p>
         </div>
 
         <div class="col-md-5">
